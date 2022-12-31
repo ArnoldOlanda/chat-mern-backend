@@ -38,7 +38,7 @@ const socketController = async (socket = new Socket(), io) => {
         }).populate('members', 'nombre img')
 
         socket.to(payload.currentReceiver).emit('recibir-mensajes', { mensaje, conversations });
-        socket.emit('recibir-mensajes', { mensaje });
+        // socket.emit('recibir-mensajes', { mensaje });
 
     })
 
